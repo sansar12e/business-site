@@ -14,6 +14,12 @@
     </style>
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.1.5/dist/decap-cms.js"></script>
+    <!--
+      Pinned to an exact version on purpose. The caret range (^3.1.5) made the
+      CDN serve the latest 3.x build, which crashes on publish with
+      "Minified React error #130". 3.7.2 is the last stable markdown-widget
+      release before the 3.8.x+ regressions. Bump deliberately after testing.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.7.2/dist/decap-cms.js"></script>
   </body>
 </html>

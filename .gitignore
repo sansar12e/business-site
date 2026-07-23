@@ -1,1 +1,11 @@
+# dependencies
 node_modules
+
+# build output (Cloudflare Pages rebuilds this from source on every push)
+dist
+
+# generated Astro cache
+.astro
+
+# OS files
+.DS_Store
