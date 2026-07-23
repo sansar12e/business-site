@@ -63,14 +63,14 @@ collections:
             name: colors
             widget: object
             fields:
-              - { label: Background Color, name: bg, widget: color, enableAlpha: false }
-              - { label: Surface Color, name: surface, widget: color, enableAlpha: false }
-              - { label: Secondary Surface, name: surface2, widget: color, enableAlpha: false }
-              - { label: Text Color, name: text, widget: color, enableAlpha: false }
-              - { label: Muted Text, name: muted, widget: color, enableAlpha: false }
-              - { label: Accent Color, name: accent, widget: color, enableAlpha: false }
-              - { label: Accent Dark, name: accentDark, widget: color, enableAlpha: false }
-              - { label: Border Color, name: border, widget: color, enableAlpha: false }
+              - { label: Background Color, name: bg, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
+              - { label: Surface Color, name: surface, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
+              - { label: Secondary Surface, name: surface2, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
+              - { label: Text Color, name: text, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
+              - { label: Muted Text, name: muted, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
+              - { label: Accent Color, name: accent, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
+              - { label: Accent Dark, name: accentDark, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
+              - { label: Border Color, name: border, widget: string, hint: "Hex colour, e.g. #2563eb", pattern: ["^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", "Must be a hex colour such as #2563eb"] }
               - { label: Shadow Effect, name: shadow, widget: string }
 
           - label: Typography
@@ -88,6 +88,7 @@ collections:
               - { label: Subtitle, name: subtitle, widget: string }
               - { label: CTA Button Text, name: ctaText, widget: string }
               - { label: CTA Button Link, name: ctaLink, widget: string }
+
           - label: Services
             name: services
             widget: list
