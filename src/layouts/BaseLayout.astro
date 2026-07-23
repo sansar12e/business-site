@@ -1,22 +1,39 @@
 ---
 import '../styles/global.css';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+import config from '../config.json';
 
 const { title, description, image, canonical, type = 'website' } = Astro.props;
-const siteTitle = 'Northstar Advisory';
+
+const { site, colors, typography } = config;
+
+const siteTitle = site.name;
 const resolvedTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-const resolvedDescription = description || 'Modern business strategy and operations consulting for ambitious teams.';
+const resolvedDescription = description || site.description;
 const resolvedImage = image || '/og-image.svg';
 const resolvedCanonical = canonical || new URL(Astro.url.pathname, Astro.site).toString();
----
 
-<html lang="en">
+const themeVars = [
+  `--bg:${colors.bg}`,
+  `--surface:${colors.surface}`,
+  `--surface-2:${colors.surface2}`,
+  `--text:${colors.text}`,
+  `--muted:${colors.muted}`,
+  `--accent:${colors.accent}`,
+  `--accent-dark:${colors.accentDark}`,
+  `--border:${colors.border}`,
+  `--shadow:${colors.shadow}`,
+  `--font-family:${typography.fontFamily}`,
+  `--line-height:${typography.lineHeight}`,
+].join(';');
+---
+<html lang="en" style={themeVars}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={resolvedDescription} />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content={colors.accent} />
     <link rel="canonical" href={resolvedCanonical} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:type" content={type} />
@@ -29,7 +46,7 @@ const resolvedCanonical = canonical || new URL(Astro.url.pathname, Astro.site).t
     <meta name="twitter:description" content={resolvedDescription} />
     <meta name="twitter:image" content={new URL(resolvedImage, Astro.site).toString()} />
     <title>{resolvedTitle}</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <slot />
