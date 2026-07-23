@@ -2,7 +2,7 @@ backend:
   name: github
   repo: sansar12e/business-site
   branch: main
-  auth_endpoint: api/auth
+  auth_endpoint: /api/auth
 
 media_folder: public/uploads
 public_path: /uploads
