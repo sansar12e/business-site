@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 
-const pages = ['/', '/about', '/services', '/blog', '/contact', '/blog/strategy-2026', '/blog/operations-reset'];
+const pages = ['/', '/about', '/services', '/book', '/blog', '/blog/strategy-2026', '/blog/operations-reset'];
 
 export const GET: APIRoute = () => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

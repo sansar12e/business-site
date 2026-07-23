@@ -5,25 +5,90 @@ import Footer from '../components/Footer.astro';
 import { siteConfig } from '../config';
 ---
 
-<BaseLayout title="Services" description="Explore services for growth strategy, operations design, and leadership support.">
+<BaseLayout
+  title="Services"
+  description="Verified research projects and monthly retainers — price checks, lead lists, competitor tracking, and catalog care."
+>
   <Navbar />
   <main>
     <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow reveal">Services</p>
+        <h1 class="reveal">Projects open the door. Retainers keep the data current.</h1>
+        <p class="section-lead reveal">
+          Anyone can generate a lead list or competitor report with AI. You get the checked
+          version — every fact confirmed by a human — and a clear path to keep it from going stale.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
       <div class="container">
-        <p class="eyebrow">Services</p>
-        <h1>Support designed for your current stage.</h1>
-        <p>Each engagement is tailored around the realities of your business, your team, and your goals.</p>
-        <div class="grid grid-3">
-          {siteConfig.services.map((service) => (
-            <article class="card">
-              <h3>{service.title}</h3>
+        <h2 class="reveal">Projects</h2>
+        <p class="section-lead reveal">One payment, one delivery — the way most clients start.</p>
+        <ul class="service-list">
+          {siteConfig.projects.map((service) => (
+            <li class="service-row reveal">
+              <div class="service-head">
+                <h3>{service.title}</h3>
+                <span class="price">{service.price}</span>
+              </div>
               <p>{service.description}</p>
               <ul class="list">
-                {service.benefits.map((benefit) => <li>{benefit}</li>)}
+                {service.benefits.map((benefit) => (
+                  <li>{benefit}</li>
+                ))}
               </ul>
-              <a class="button secondary" href="/contact">Schedule a call</a>
-            </article>
+            </li>
           ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal">Retainers</h2>
+        <p class="section-lead reveal">
+          Monthly work that keeps prices, leads, catalogs, and research accurate. Price Watch
+          and Lead Pipeline are the usual next step after a project.
+        </p>
+        <ul class="service-list">
+          {siteConfig.retainers.map((service) => (
+            <li class="service-row reveal">
+              <div class="service-head">
+                <h3>
+                  {service.title}
+                  {service.featured && <span class="tag">Start here</span>}
+                </h3>
+                <span class="price">{service.price}</span>
+              </div>
+              <p>{service.description}</p>
+              <p class="for-whom">For: {service.forWhom}</p>
+              <ul class="list">
+                {service.benefits.map((benefit) => (
+                  <li>{benefit}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <h2 class="reveal">Guarantees</h2>
+        <ul class="guarantee-list">
+          {siteConfig.guarantees.map((item) => (
+            <li class="reveal">{item}</li>
+          ))}
+        </ul>
+        <p class="reveal muted-note">
+          I don’t guarantee more sales, conversions, or rankings — only that the data is
+          accurate and delivered on time.
+        </p>
+        <div class="cta-row reveal">
+          <a class="button" href="/book">Book a Consultation</a>
         </div>
       </div>
     </section>

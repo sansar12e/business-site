@@ -78,6 +78,7 @@ collections:
             widget: object
             fields:
               - { label: Font Family, name: fontFamily, widget: string }
+              - { label: Display Font, name: fontDisplay, widget: string }
               - { label: Line Height, name: lineHeight, widget: string }
 
           - label: Hero Section
@@ -89,30 +90,38 @@ collections:
               - { label: CTA Button Text, name: ctaText, widget: string }
               - { label: CTA Button Link, name: ctaLink, widget: string }
 
-          - label: Services
-            name: services
+          - label: Projects
+            name: projects
             widget: list
             fields:
               - { label: ID, name: id, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
-              - label: Icon
-                name: icon
-                widget: string
-                hint: "Use an emoji or Unicode character"
+              - { label: Price, name: price, widget: string }
               - label: Benefits
                 name: benefits
                 widget: list
                 field: { label: Benefit, name: benefit, widget: string }
 
-          - label: Testimonials
-            name: testimonials
+          - label: Retainers
+            name: retainers
             widget: list
             fields:
-              - { label: Quote, name: quote, widget: text }
-              - { label: Author Name, name: author, widget: string }
-              - { label: Company, name: company, widget: string }
-              - { label: Image, name: image, widget: image, required: false }
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Price, name: price, widget: string }
+              - { label: Who it's for, name: forWhom, widget: string }
+              - { label: Featured, name: featured, widget: boolean, default: false, required: false }
+              - label: Benefits
+                name: benefits
+                widget: list
+                field: { label: Benefit, name: benefit, widget: string }
+
+          - label: Guarantees
+            name: guarantees
+            widget: list
+            field: { label: Guarantee, name: guarantee, widget: string }
 
           - label: FAQ
             name: faq

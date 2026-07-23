@@ -7,11 +7,11 @@
     "formspreeId": "YOUR_FORMSPREE_ID"
   },
   "site": {
-    "name": "Your Business",
-    "tagline": "Professional Solutions for Modern Business",
-    "description": "A modern business website built with Astro",
+    "name": "Lydia Zhigmitova",
+    "tagline": "Verified research and data, kept current.",
+    "description": "Human-verified research and data services — every fact checked, dated, and kept current.",
     "url": "https://example.com",
-    "author": "Your Name"
+    "author": "Lydia Zhigmitova"
   },
   "social": {
     "linkedin": "https://linkedin.com/in/yourprofile",
@@ -20,123 +20,172 @@
     "email": "hello@example.com"
   },
   "about": {
-    "intro": "Passionate about helping businesses succeed in the digital age.",
-    "mission": "To empower businesses with strategic insights and expert execution.",
+    "intro": "I help businesses replace AI guesses and stale spreadsheets with research that has been checked by a human — and kept current on a schedule.",
+    "mission": "Deliver verified facts with dated proof, then keep them accurate as the world changes.",
     "values": [
       {
-        "title": "Excellence",
-        "description": "We strive for perfection in everything we do"
+        "title": "Accuracy",
+        "description": "Every row, price, and contact is confirmed before it reaches you"
       },
       {
-        "title": "Integrity",
-        "description": "Honest communication and transparent relationships"
+        "title": "Proof",
+        "description": "Dated screenshots, bounce reports, and timestamps back every claim"
       },
       {
-        "title": "Innovation",
-        "description": "Always looking for better, smarter solutions"
+        "title": "Currency",
+        "description": "Data goes stale fast — keeping it current is the real service"
       },
       {
-        "title": "Impact",
-        "description": "Focused on delivering measurable business results"
+        "title": "Clarity",
+        "description": "Short reports on what changed, not walls of unchecked data"
       }
     ],
-    "experience": "10+ years of experience working with businesses of all sizes"
+    "experience": "Focused on verified research, lead lists, competitor pricing, and catalog work for online stores and small agencies."
   },
   "typography": {
-    "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "fontFamily": "'Source Sans 3', ui-sans-serif, system-ui, sans-serif",
+    "fontDisplay": "'Fraunces', Georgia, 'Times New Roman', serif",
     "lineHeight": "1.65"
   },
   "colors": {
     "shadow": "0 12px 40px rgba(15, 23, 42, 0.08)",
-    "accentDark": "#1d9ad8",
-    "bg": "#f8fbff",
-    "surface2": "#e9ecf5",
-    "accent": "#025480",
-    "muted": "#475569",
-    "border": "#dbeafe",
+    "accentDark": "#1a6b8a",
+    "bg": "#f4f7f9",
+    "surface2": "#e8eef2",
+    "accent": "#2a5f74",
+    "muted": "#4a5568",
+    "border": "#d4dde4",
     "surface": "#ffffff",
-    "text": "#101521"
+    "text": "#1a2332"
   },
-  "testimonials": [
-    {
-      "quote": "Working with this team transformed how we operate. Highly recommended!",
-      "author": "Sarah Johnson",
-      "company": "Tech Startup Inc",
-      "image": "/testimonials/sarah.jpg"
-    },
-    {
-      "quote": "Professional, reliable, and results-driven. Exactly what we needed.",
-      "author": "Michael Chen",
-      "company": "Global Solutions Ltd",
-      "image": "/testimonials/michael.jpg"
-    },
-    {
-      "quote": "The expertise and attention to detail is unmatched in the industry.",
-      "author": "Emma Williams",
-      "company": "Creative Agency Co",
-      "image": "/testimonials/emma.jpg"
-    }
-  ],
   "faq": [
     {
-      "question": "What is your typical engagement model?",
-      "answer": "We work with clients on a project basis, retainer basis, or hourly consulting. We discuss your specific needs and recommend the best approach."
+      "question": "How do engagements usually work?",
+      "answer": "Most clients start with a fixed-price project — a price check, lead list, research brief, or catalog audit. Every project ends with a note on what will already be out of date in 30–90 days. From there, many move to a monthly retainer to keep the data current."
     },
     {
-      "question": "How long does a typical project take?",
-      "answer": "Project timelines vary based on scope and complexity. Most projects range from 4-12 weeks. We provide detailed timelines during the initial consultation."
+      "question": "How long does a project take?",
+      "answer": "Typical turnaround is a few business days once scope is clear. I’ll confirm timing when you book. Retainers run month-to-month on a fixed schedule."
     },
     {
-      "question": "Do you offer support after project completion?",
-      "answer": "Yes! We offer ongoing support packages to ensure your success continues after launch. Maintenance and optimization are key to long-term success."
+      "question": "What do you guarantee?",
+      "answer": "Bounced emails are replaced free. Every price is backed by a dated screenshot. Mistakes are fixed free or refunded. On Price Watch: if a tracked competitor changes price and it’s missing from that month’s report, that month is free. I don’t guarantee sales, conversions, or rankings — only that the data is accurate and on time."
     },
     {
-      "question": "What is your pricing structure?",
-      "answer": "Our pricing is customized based on project scope, complexity, and timeline. We offer competitive rates and flexible payment terms."
+      "question": "Are retainers locked in?",
+      "answer": "No. Retainers are month-to-month with no lock-in contract. You can cancel any time. Billing is simple and predictable at a fixed monthly price."
     }
   ],
   "hero": {
-    "title": "Modern Solutions for Your Business",
-    "subtitle": "Build something amazing with our expert guidance and support",
+    "title": "Verified research and data, kept current.",
+    "subtitle": "Not AI guesses — every row, price, and contact confirmed by a human before it reaches you.",
     "ctaText": "Book a Consultation",
-    "ctaLink": "/contact"
+    "ctaLink": "/book"
   },
-  "services": [
+  "projects": [
     {
-      "id": "strategy",
-      "title": "Strategic Planning",
-      "description": "Develop a roadmap for your business growth",
+      "id": "price-check",
+      "title": "Price check",
+      "description": "Real prices from competitors’ checkout pages, with dated screenshots.",
+      "price": "$450",
       "benefits": [
-        "Clear direction",
-        "Risk mitigation",
-        "Market analysis",
-        "Competitive advantage"
-      ],
-      "icon": "📊"
+        "Checkout-page prices, not marketing claims",
+        "Dated screenshot proof for every figure",
+        "Note on what will already be stale in 30–90 days"
+      ]
     },
     {
-      "id": "implementation",
-      "title": "Implementation",
-      "description": "Execute your vision with precision and expertise",
+      "id": "lead-list",
+      "title": "Lead list",
+      "description": "Verified names, titles, and working emails.",
+      "price": "$350",
       "benefits": [
-        "Expert execution",
-        "On-time delivery",
-        "Quality assurance",
-        "Dedicated support"
-      ],
-      "icon": "⚙️"
+        "Human-confirmed contacts",
+        "Working emails only",
+        "Clear handoff ready for outreach"
+      ]
     },
     {
-      "id": "optimization",
-      "title": "Optimization",
-      "description": "Continuously improve performance and results",
+      "id": "research-brief",
+      "title": "Research brief",
+      "description": "A pricing or competitor study — every fact checked and dated.",
+      "price": "$750",
       "benefits": [
-        "Data-driven insights",
-        "Performance tracking",
-        "ROI maximization",
-        "Scalability"
-      ],
-      "icon": "🚀"
+        "Checked, dated sources",
+        "Written summary you can share",
+        "Built for buyers, consultants, and agencies"
+      ]
+    },
+    {
+      "id": "catalog-audit",
+      "title": "Catalog audit",
+      "description": "A full review of an online store’s product pages — what’s thin, missing, or wrong.",
+      "price": "$500",
+      "benefits": [
+        "Page-by-page gaps flagged",
+        "Prioritized list of what to fix",
+        "Clear path into ongoing Catalog Care"
+      ]
     }
+  ],
+  "retainers": [
+    {
+      "id": "price-watch",
+      "title": "Price Watch",
+      "description": "Track 5 competitors’ prices weekly; short “what changed” note with screenshots.",
+      "price": "$650/mo",
+      "forWhom": "Online stores and anyone who cares what competitors charge",
+      "featured": true,
+      "benefits": [
+        "Weekly price checks, batched and consistent",
+        "Dated screenshot proof",
+        "Missed change in a tracked price → that month free"
+      ]
+    },
+    {
+      "id": "lead-pipeline",
+      "title": "Lead Pipeline",
+      "description": "100 fresh, verified leads a month; bounced emails replaced free.",
+      "price": "$750/mo",
+      "forWhom": "Agencies, salespeople, and recruiters",
+      "featured": true,
+      "benefits": [
+        "100 verified leads monthly",
+        "Bounced emails replaced free",
+        "Steady pipeline without hiring a VA"
+      ]
+    },
+    {
+      "id": "catalog-care",
+      "title": "Catalog Care",
+      "description": "Write or update up to 50 product pages a month; flag broken or thin listings.",
+      "price": "$950/mo",
+      "forWhom": "Online stores with 200+ products",
+      "featured": false,
+      "benefits": [
+        "Up to 50 pages written or updated",
+        "Thin and broken listings flagged",
+        "Catalog stays healthy, not piecemeal"
+      ]
+    },
+    {
+      "id": "research-desk",
+      "title": "Research Desk",
+      "description": "One research brief a month, plus a short call and written summary of what changed.",
+      "price": "$1,500/mo",
+      "forWhom": "Buyers, consultants, and agencies who resell advice",
+      "featured": false,
+      "benefits": [
+        "One verified brief per month",
+        "Short call + written change summary",
+        "Ongoing desk without a full-time hire"
+      ]
+    }
+  ],
+  "guarantees": [
+    "Bounced emails are replaced free",
+    "Every price is backed by a dated screenshot",
+    "Mistakes are fixed free or refunded",
+    "Price Watch miss on a tracked change → that month free"
   ]
 }
