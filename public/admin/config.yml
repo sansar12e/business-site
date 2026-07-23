@@ -9,6 +9,25 @@ media_folder: public/uploads
 public_path: /uploads
 
 collections:
+  - name: blog
+    label: Blog Posts
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{title}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Short Description, name: description, widget: text }
+      - { label: Publish Date, name: pubDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: Category, name: category, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Reading Time, name: readingTime, widget: string, required: false, hint: "e.g. 6 min read" }
+      - { label: Draft, name: draft, widget: boolean, default: false, required: false }
+      - { label: Body, name: body, widget: markdown }
+
   - name: site
     label: Site Settings
     files:
@@ -69,7 +88,6 @@ collections:
               - { label: Subtitle, name: subtitle, widget: string }
               - { label: CTA Button Text, name: ctaText, widget: string }
               - { label: CTA Button Link, name: ctaLink, widget: string }
-
           - label: Services
             name: services
             widget: list

@@ -1,26 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
-const posts = [
-  {
-    title: 'How to build a resilient growth strategy in 2026',
-    description: 'A practical framework for choosing the right priorities in a shifting market.',
-    slug: 'strategy-2026',
-    category: 'Strategy',
-    tags: ['growth', 'planning'],
-    readingTime: '6 min read',
-  },
-  {
-    title: 'Three signs your operations need a reset',
-    description: 'A simple audit of the friction points that slow delivery and drain energy.',
-    slug: 'operations-reset',
-    category: 'Operations',
-    tags: ['operations', 'efficiency'],
-    readingTime: '4 min read',
-  },
-];
+const posts = (await getCollection('blog', ({ data }) => data.draft !== true)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <BaseLayout title="Blog" description="Insights on strategy, operations, and leadership for growing businesses.">
@@ -38,14 +24,14 @@ const posts = [
         <div class="grid grid-2">
           {posts.map((post) => (
             <article class="card">
-              <p class="eyebrow">{post.category}</p>
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
+              {post.data.category && <p class="eyebrow">{post.data.category}</p>}
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
               <div class="blog-meta">
-                <span class="pill">{post.readingTime}</span>
-                {post.tags.map((tag) => <span class="pill">#{tag}</span>)}
+                {post.data.readingTime && <span class="pill">{post.data.readingTime}</span>}
+                {post.data.tags.map((tag) => <span class="pill">#{tag}</span>)}
               </div>
-              <a class="button secondary" href={`/blog/${post.slug}`}>Read article</a>
+              <a class="button secondary" href={`/blog/${post.id}`}>Read article</a>
             </article>
           ))}
         </div>
