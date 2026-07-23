@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config';
+---
+
+<BaseLayout title="About" description="Learn about Northstar Advisory and the experience behind the work.">
+  <Navbar />
+  <main>
+    <section class="section">
+      <div class="container grid grid-2">
+        <div>
+          <p class="eyebrow">About</p>
+          <h1>Built around thoughtful strategy and calm execution.</h1>
+          <p>I work with founders and leadership teams who need strategic clarity without unnecessary complexity. My approach combines practical insight, measured listening, and a bias toward action.</p>
+          <p>Over the past decade, I’ve supported organizations across growth, operational redesign, and leadership transitions. The result is usually the same: better alignment, faster decisions, and a stronger foundation for the work ahead.</p>
+        </div>
+        <div>
+          <img class="about-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Consultant portrait" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-3">
+        <article class="card">
+          <h3>Mission</h3>
+          <p>{siteConfig.about.mission}</p>
+        </article>
+        <article class="card">
+          <h3>Values</h3>
+          <ul class="list">
+            {siteConfig.about.values.map((value) => (
+              <li><strong>{value.title}</strong> — {value.description}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Experience</h3>
+          <p>{siteConfig.about.experience}</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

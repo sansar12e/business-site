@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config';
+---
+
+<BaseLayout title="Services" description="Explore services for growth strategy, operations design, and leadership support.">
+  <Navbar />
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Services</p>
+        <h1>Support designed for your current stage.</h1>
+        <p>Each engagement is tailored around the realities of your business, your team, and your goals.</p>
+        <div class="grid grid-3">
+          {siteConfig.services.map((service) => (
+            <article class="card">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <ul class="list">
+                {service.benefits.map((benefit) => <li>{benefit}</li>)}
+              </ul>
+              <a class="button secondary" href="/contact">Schedule a call</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

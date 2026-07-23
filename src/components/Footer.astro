@@ -1,0 +1,16 @@
+---
+import { siteConfig } from '../config';
+---
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <strong>{siteConfig.site.name}</strong>
+      <p>{siteConfig.site.description}</p>
+    </div>
+    <div>
+      <p><a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></p>
+      <p><a href={siteConfig.contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>

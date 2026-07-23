@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+
+const { title, description, image, canonical, type = 'website' } = Astro.props;
+const siteTitle = 'Northstar Advisory';
+const resolvedTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+const resolvedDescription = description || 'Modern business strategy and operations consulting for ambitious teams.';
+const resolvedImage = image || '/og-image.svg';
+const resolvedCanonical = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={resolvedDescription} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href={resolvedCanonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={resolvedTitle} />
+    <meta property="og:description" content={resolvedDescription} />
+    <meta property="og:image" content={new URL(resolvedImage, Astro.site).toString()} />
+    <meta property="og:site_name" content={siteTitle} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedTitle} />
+    <meta name="twitter:description" content={resolvedDescription} />
+    <meta name="twitter:image" content={new URL(resolvedImage, Astro.site).toString()} />
+    <title>{resolvedTitle}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
