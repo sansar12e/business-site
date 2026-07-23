@@ -1,5 +1,7 @@
 // Handles the GitHub OAuth login flow for Decap CMS on Cloudflare Pages.
 //
+// MUST live at: functions/api/[[route]].ts
+//
 // Two addresses are served:
 //   /api/auth      -> sends the visitor to GitHub to approve access
 //   /api/callback  -> receives them back and exchanges the code for a token
@@ -8,7 +10,23 @@
 //   DECAP_CMS_GITHUB_CLIENT_ID
 //   DECAP_CMS_GITHUB_CLIENT_SECRET
 
-export async function onRequest(context) {
+interface Env {
+  DECAP_CMS_GITHUB_CLIENT_ID?: string;
+  DECAP_CMS_GITHUB_CLIENT_SECRET?: string;
+}
+
+interface RequestContext {
+  request: Request;
+  env: Env;
+}
+
+interface GitHubTokenResponse {
+  access_token?: string;
+  error?: string;
+  error_description?: string;
+}
+
+export async function onRequest(context: RequestContext): Promise<Response> {
   const { request, env } = context;
   const url = new URL(request.url);
   const path = url.pathname.replace(/\/+$/, "");
@@ -52,7 +70,8 @@ export async function onRequest(context) {
       );
     }
 
-    let data;
+    let data: GitHubTokenResponse;
+
     try {
       const tokenResponse = await fetch(
         "https://github.com/login/oauth/access_token",
@@ -70,19 +89,21 @@ export async function onRequest(context) {
           }),
         }
       );
-      data = await tokenResponse.json();
-    } catch (err) {
-      return new Response(`Could not reach GitHub: ${err.message}`, {
+      data = (await tokenResponse.json()) as GitHubTokenResponse;
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      return new Response(`Could not reach GitHub: ${message}`, {
         status: 502,
         headers: { "Content-Type": "text/plain" },
       });
     }
 
     if (data.error || !data.access_token) {
-      return new Response(
-        `GitHub refused the login: ${data.error_description || data.error || "unknown error"}`,
-        { status: 401, headers: { "Content-Type": "text/plain" } }
-      );
+      const reason = data.error_description || data.error || "unknown error";
+      return new Response(`GitHub refused the login: ${reason}`, {
+        status: 401,
+        headers: { "Content-Type": "text/plain" },
+      });
     }
 
     const payload = JSON.stringify({
