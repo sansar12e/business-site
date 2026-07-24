@@ -21,6 +21,11 @@
   },
   "about": {
     "intro": "I help businesses make AI accurate and verifiable — testing AI systems, structuring content so it holds up, and checking every claim against its source before it reaches a customer.",
+    "summary": [
+      "I'm an AI/LLM specialist with three years of production generative-AI experience, built on more than a decade in applied linguistics. As a prompt engineer, I develop and evaluate production-grade prompt systems.",
+      "I optimize across GPT, Claude, and Gemini for the right balance of accuracy, performance, and cost, and design for regulated environments where SOC 2, HIPAA, and GDPR compliance is non-negotiable.",
+      "Before GenAI, I worked as an editor, publishing articles and guides to a strict editorial standard. That combination is the heart of what I offer: the technical skill to make AI systems perform, and the editorial discipline to ensure what they produce is accurate, verifiable, and worth publishing."
+    ],
     "mission": "Make AI outputs accurate, verifiable, and genuinely useful, with a person accountable for what ships.",
     "values": [
       {
@@ -39,8 +44,7 @@
         "title": "Clarity",
         "description": "Short reports on what is wrong and how to fix it, not walls of output"
       }
-    ],
-    "experience": "Focused on AI visibility, chatbot quality, AI help systems, document automation, and fact-checking for AI-generated content."
+    ]
   },
   "typography": {
     "fontFamily": "'Source Sans 3', ui-sans-serif, system-ui, sans-serif",

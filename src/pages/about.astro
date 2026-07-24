@@ -26,12 +26,9 @@ import { siteConfig } from '../config';
           <p class="eyebrow">About</p>
           <h1>{siteConfig.site.name}</h1>
           <p>{siteConfig.about.intro}</p>
-          <p>
-            AI is fast, but it guesses. It cites things that were never said, answers questions it
-            shouldn’t, and drifts off-brand. My work is the verification layer around it — so what
-            your customers and buyers see is checked, sourced, and trustworthy.
-          </p>
-          <p>{siteConfig.about.experience}</p>
+          {siteConfig.about.summary.map((para) => (
+            <p>{para}</p>
+          ))}
         </div>
       </div>
     </section>

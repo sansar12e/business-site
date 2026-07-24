@@ -14,13 +14,24 @@ const highlights = siteConfig.services.slice(0, 3);
   <Navbar />
   <main>
     <section class="hero hero-minimal">
-      <div class="container hero-inner">
-        <p class="brand-signal reveal">{siteConfig.site.name}</p>
-        <h1 class="reveal delay-1">{siteConfig.hero.title}</h1>
-        <p class="hero-lead reveal delay-2">{siteConfig.hero.subtitle}</p>
-        <div class="cta-row reveal delay-3">
-          <a class="button" href={siteConfig.hero.ctaLink}>{siteConfig.hero.ctaText}</a>
-          <a class="button secondary" href="/services">View services</a>
+      <div class="container hero-grid">
+        <div class="hero-photo-wrap reveal">
+          <img
+            class="hero-photo"
+            src="/images/lydia.png"
+            alt="Lydia Zhigmitova"
+            width="240"
+            height="240"
+          />
+        </div>
+        <div class="hero-inner">
+          <p class="brand-signal reveal">{siteConfig.site.name}</p>
+          <h1 class="reveal delay-1">{siteConfig.hero.title}</h1>
+          <p class="hero-lead reveal delay-2">{siteConfig.hero.subtitle}</p>
+          <div class="cta-row reveal delay-3">
+            <a class="button" href={siteConfig.hero.ctaLink}>{siteConfig.hero.ctaText}</a>
+            <a class="button secondary" href="/services">View services</a>
+          </div>
         </div>
       </div>
     </section>

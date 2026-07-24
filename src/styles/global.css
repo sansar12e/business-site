@@ -199,6 +199,25 @@ p { margin: 0 0 1rem; color: var(--muted); }
   max-width: 40rem;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.hero-photo-wrap { flex-shrink: 0; }
+
+.hero-photo {
+  width: clamp(150px, 22vw, 240px);
+  height: clamp(150px, 22vw, 240px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid color-mix(in srgb, var(--border) 70%, var(--accent));
+  box-shadow: var(--shadow);
+}
+
 .brand-signal {
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.5vw, 1.75rem);
@@ -547,6 +566,17 @@ textarea { min-height: 120px; resize: vertical; }
   .hero-minimal {
     min-height: auto;
     padding: 3.5rem 0 3rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 1.5rem;
+  }
+
+  .hero-photo {
+    width: 132px;
+    height: 132px;
   }
 
   .about-layout {

@@ -125,8 +125,11 @@ collections:
             widget: object
             fields:
               - { label: Intro, name: intro, widget: string }
+              - label: Summary
+                name: summary
+                widget: list
+                field: { label: Paragraph, name: paragraph, widget: text }
               - { label: Mission, name: mission, widget: string }
-              - { label: Experience, name: experience, widget: string }
               - label: Values
                 name: values
                 widget: list
