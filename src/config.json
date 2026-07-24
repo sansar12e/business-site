@@ -8,8 +8,8 @@
   },
   "site": {
     "name": "Lydia Zhigmitova",
-    "tagline": "Verified research and data, kept current.",
-    "description": "Human-verified research and data services — every fact checked, dated, and kept current.",
+    "tagline": "Making AI accurate, verifiable, and useful.",
+    "description": "AI-visibility audits, chatbot testing, AI help systems, document automation, and content fact-checking — making AI accurate, verifiable, and useful for your business.",
     "url": "https://example.com",
     "author": "Lydia Zhigmitova"
   },
@@ -20,27 +20,27 @@
     "email": "hello@example.com"
   },
   "about": {
-    "intro": "I help businesses replace AI guesses and stale spreadsheets with research that has been checked by a human — and kept current on a schedule.",
-    "mission": "Deliver verified facts with dated proof, then keep them accurate as the world changes.",
+    "intro": "I help businesses make AI accurate and verifiable — testing AI systems, structuring content so it holds up, and checking every claim against its source before it reaches a customer.",
+    "mission": "Make AI outputs accurate, verifiable, and genuinely useful, with a person accountable for what ships.",
     "values": [
       {
         "title": "Accuracy",
-        "description": "Every row, price, and contact is confirmed before it reaches you"
+        "description": "Every claim is checked against source material before it ships"
       },
       {
-        "title": "Proof",
-        "description": "Dated screenshots, bounce reports, and timestamps back every claim"
+        "title": "Verifiability",
+        "description": "Answers cite their source, so anyone can trace where they came from"
       },
       {
-        "title": "Currency",
-        "description": "Data goes stale fast — keeping it current is the real service"
+        "title": "Restraint",
+        "description": "A dependable AI system declines to answer rather than guess"
       },
       {
         "title": "Clarity",
-        "description": "Short reports on what changed, not walls of unchecked data"
+        "description": "Short reports on what is wrong and how to fix it, not walls of output"
       }
     ],
-    "experience": "Focused on verified research, lead lists, competitor pricing, and catalog work for online stores and small agencies."
+    "experience": "Focused on AI visibility, chatbot quality, AI help systems, document automation, and fact-checking for AI-generated content."
   },
   "typography": {
     "fontFamily": "'Source Sans 3', ui-sans-serif, system-ui, sans-serif",
@@ -61,131 +61,91 @@
   "faq": [
     {
       "question": "How do engagements usually work?",
-      "answer": "Most clients start with a fixed-price project — a price check, lead list, research brief, or catalog audit. Every project ends with a note on what will already be out of date in 30–90 days. From there, many move to a monthly retainer to keep the data current."
+      "answer": "Most clients start with a fixed-scope project — an AI-visibility audit, a chatbot test report, a document-automation build, or a batch of content to fact-check. From there, some move to ongoing work, such as maintaining an AI help system or a monthly editing bundle."
     },
     {
       "question": "How long does a project take?",
-      "answer": "Typical turnaround is a few business days once scope is clear. I’ll confirm timing when you book. Retainers run month-to-month on a fixed schedule."
+      "answer": "Most projects turn around in a few business days once scope is clear. Larger builds, such as an AI help system, take longer. I confirm timing before any work begins."
     },
     {
       "question": "What do you guarantee?",
-      "answer": "Bounced emails are replaced free. Every price is backed by a dated screenshot. Mistakes are fixed free or refunded. On Price Watch: if a tracked competitor changes price and it’s missing from that month’s report, that month is free. I don’t guarantee sales, conversions, or rankings — only that the data is accurate and on time."
+      "answer": "That the work is accurate, verifiable, and delivered on time. Every claim in content is checked against source material, and the AI assistants I build answer only from verified content. I cannot guarantee inclusion in AI-generated answers, rankings, or sales — no honest provider can."
     },
     {
-      "question": "Are retainers locked in?",
-      "answer": "No. Retainers are month-to-month with no lock-in contract. You can cancel any time. Billing is simple and predictable at a fixed monthly price."
+      "question": "Are ongoing plans locked in?",
+      "answer": "No. Maintenance and monthly bundles are month-to-month with no lock-in contract. You can cancel any time, and pricing stays fixed and predictable."
     }
   ],
   "hero": {
-    "title": "Verified research and data, kept current.",
-    "subtitle": "Not AI guesses — every row, price, and contact confirmed by a human before it reaches you.",
+    "title": "Make AI accurate, verifiable, and useful.",
+    "subtitle": "I test, structure, and verify AI systems and content — so buyers can find you through AI search, your assistants answer correctly, and everything you publish holds up.",
     "ctaText": "Book a Consultation",
     "ctaLink": "/book"
   },
-  "projects": [
+  "services": [
     {
-      "id": "price-check",
-      "title": "Price check",
-      "description": "Real prices from competitors’ checkout pages, with dated screenshots.",
-      "price": "$450",
-      "benefits": [
-        "Checkout-page prices, not marketing claims",
-        "Dated screenshot proof for every figure",
-        "Note on what will already be stale in 30–90 days"
+      "id": "ai-visibility",
+      "title": "AI-Visibility Audit & Optimization",
+      "summary": "Get cited when buyers ask AI instead of a search engine.",
+      "description": "Buyers increasingly ask ChatGPT, Claude, and Perplexity the questions they used to type into search engines. This service tests 20–30 questions your buyers are likely to ask, identifies where your brand is absent from the answers, and restructures your content into the fact-dense formats these platforms favor when choosing sources to cite. No provider can guarantee inclusion in AI-generated answers, but well-structured content measurably improves the likelihood of being cited.",
+      "forWhom": "Brands that want to be discoverable through AI search, not only traditional search engines.",
+      "priceSummary": "Free audit for first clients",
+      "pricing": [
+        { "label": "Audit", "value": "Standard rate from $150", "free": true },
+        { "label": "Content rewrite", "value": "from $1,000", "free": false }
       ]
     },
     {
-      "id": "lead-list",
-      "title": "Lead list",
-      "description": "Verified names, titles, and working emails.",
-      "price": "$350",
-      "benefits": [
-        "Human-confirmed contacts",
-        "Working emails only",
-        "Clear handoff ready for outreach"
+      "id": "chatbot-testing",
+      "title": "Chatbot Testing & Quality Report",
+      "summary": "Find where your chatbot fails before your customers do.",
+      "description": "For businesses running an AI assistant, this service puts it through 50–100 realistic test questions, scores each response, and delivers a report that pinpoints failure points, their root causes, and recommended fixes. You see the weak spots before a customer encounters them directly.",
+      "forWhom": "Businesses operating a live chatbot, and agencies that build chatbots for clients.",
+      "priceSummary": "From $250",
+      "pricing": [
+        { "label": "", "value": "from $250", "free": false }
       ]
     },
     {
-      "id": "research-brief",
-      "title": "Research brief",
-      "description": "A pricing or competitor study — every fact checked and dated.",
-      "price": "$750",
-      "benefits": [
-        "Checked, dated sources",
-        "Written summary you can share",
-        "Built for buyers, consultants, and agencies"
+      "id": "ai-help-system",
+      "title": "AI Help System — Build & Maintain",
+      "summary": "A branded help center that answers only from verified content.",
+      "description": "This service consolidates scattered customer information — social media replies, email threads, informal FAQs — into a structured, branded help center. An AI assistant is then layered on top, answering questions using only verified source content, citing where each answer comes from, and declining to answer rather than guessing when the information is unavailable.",
+      "forWhom": "Brands and clinics whose staff repeatedly answer the same customer questions.",
+      "priceSummary": "Build from $800",
+      "pricing": [
+        { "label": "Build", "value": "from $800", "free": false },
+        { "label": "Maintenance", "value": "from $400/month", "free": false }
       ]
     },
     {
-      "id": "catalog-audit",
-      "title": "Catalog audit",
-      "description": "A full review of an online store’s product pages — what’s thin, missing, or wrong.",
-      "price": "$500",
-      "benefits": [
-        "Page-by-page gaps flagged",
-        "Prioritized list of what to fix",
-        "Clear path into ongoing Catalog Care"
-      ]
-    }
-  ],
-  "retainers": [
-    {
-      "id": "price-watch",
-      "title": "Price Watch",
-      "description": "Track 5 competitors’ prices weekly; short “what changed” note with screenshots.",
-      "price": "$650/mo",
-      "forWhom": "Online stores and anyone who cares what competitors charge",
-      "featured": true,
-      "benefits": [
-        "Weekly price checks, batched and consistent",
-        "Dated screenshot proof",
-        "Missed change in a tracked price → that month free"
+      "id": "document-automation",
+      "title": "Document Automation",
+      "summary": "Automate one repetitive document task, with a human check.",
+      "description": "Most businesses have at least one repetitive document task quietly consuming staff time — turning inbound enquiries into structured records, summarizing supplier documentation, or generating label and listing copy from product data. This service builds a reliable, automated pipeline for one such task, with a verification step so flagged discrepancies are reviewed by a person before anything reaches a customer.",
+      "forWhom": "Teams performing the same manual document task on a recurring basis.",
+      "priceSummary": "From $300",
+      "pricing": [
+        { "label": "Workflow review", "value": "from $300", "free": false },
+        { "label": "Build", "value": "from $500", "free": false }
       ]
     },
     {
-      "id": "lead-pipeline",
-      "title": "Lead Pipeline",
-      "description": "100 fresh, verified leads a month; bounced emails replaced free.",
-      "price": "$750/mo",
-      "forWhom": "Agencies, salespeople, and recruiters",
-      "featured": true,
-      "benefits": [
-        "100 verified leads monthly",
-        "Bounced emails replaced free",
-        "Steady pipeline without hiring a VA"
-      ]
-    },
-    {
-      "id": "catalog-care",
-      "title": "Catalog Care",
-      "description": "Write or update up to 50 product pages a month; flag broken or thin listings.",
-      "price": "$950/mo",
-      "forWhom": "Online stores with 200+ products",
-      "featured": false,
-      "benefits": [
-        "Up to 50 pages written or updated",
-        "Thin and broken listings flagged",
-        "Catalog stays healthy, not piecemeal"
-      ]
-    },
-    {
-      "id": "research-desk",
-      "title": "Research Desk",
-      "description": "One research brief a month, plus a short call and written summary of what changed.",
-      "price": "$1,500/mo",
-      "forWhom": "Buyers, consultants, and agencies who resell advice",
-      "featured": false,
-      "benefits": [
-        "One verified brief per month",
-        "Short call + written change summary",
-        "Ongoing desk without a full-time hire"
+      "id": "content-fact-checking",
+      "title": "Editing & Fact-Checking for AI-Generated Content",
+      "summary": "Verify every claim in AI-drafted content before it ships.",
+      "description": "AI-generated drafts are fast to produce but prone to factual errors and inconsistent tone. This service verifies every claim in AI-drafted content against source material, corrects tone and voice, and prepares the result for publication.",
+      "forWhom": "Teams producing content with AI that need a verification step before publishing.",
+      "priceSummary": "From $30 per piece",
+      "pricing": [
+        { "label": "", "value": "from $30 per piece, or a monthly bundle rate", "free": false }
       ]
     }
   ],
   "guarantees": [
-    "Bounced emails are replaced free",
-    "Every price is backed by a dated screenshot",
-    "Mistakes are fixed free or refunded",
-    "Price Watch miss on a tracked change → that month free"
+    "AI assistants I build answer only from verified content — and decline rather than guess",
+    "Every claim in AI-drafted content is checked against source material",
+    "Reports name the failure points, their root causes, and the recommended fixes",
+    "No promises of AI-answer inclusion, rankings, or sales — only accurate, verifiable work"
   ]
 }

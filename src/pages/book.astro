@@ -7,7 +7,7 @@ import { siteConfig } from '../config';
 
 <BaseLayout
   title="Book Consultation"
-  description="Book a consultation for verified research, lead lists, price tracking, or catalog work."
+  description="Book a consultation for an AI-visibility audit, chatbot testing, an AI help system, document automation, or content fact-checking."
 >
   <Navbar />
   <main>
@@ -18,7 +18,7 @@ import { siteConfig } from '../config';
           <h1>Tell me what you need.</h1>
           <p>
             Share a few details and I’ll follow up with a fixed quote — project pricing and,
-            where it fits, what it costs to keep the work current each month.
+            where it fits, what ongoing maintenance costs each month.
           </p>
           <ul class="list">
             <li>Email: <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></li>
@@ -47,7 +47,7 @@ import { siteConfig } from '../config';
               <input
                 id="need"
                 name="need"
-                placeholder="Price check, lead list, research brief, catalog audit…"
+                placeholder="AI-visibility audit, chatbot testing, help system, document automation…"
                 required
               />
             </div>
@@ -60,7 +60,7 @@ import { siteConfig } from '../config';
               <textarea
                 id="message"
                 name="message"
-                placeholder="Links, competitors to watch, or context that helps."
+                placeholder="Links, your current AI setup, or context that helps."
               ></textarea>
             </div>
             <button class="button" type="submit">Send request</button>

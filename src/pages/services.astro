@@ -7,66 +7,37 @@ import { siteConfig } from '../config';
 
 <BaseLayout
   title="Services"
-  description="Verified research projects and monthly retainers — price checks, lead lists, competitor tracking, and catalog care."
+  description="AI-visibility audits, chatbot testing, AI help systems, document automation, and content fact-checking — five services that make AI accurate and verifiable."
 >
   <Navbar />
   <main>
     <section class="section">
       <div class="container narrow">
         <p class="eyebrow reveal">Services</p>
-        <h1 class="reveal">Projects open the door. Retainers keep the data current.</h1>
+        <h1 class="reveal">Make AI accurate, verifiable, and useful.</h1>
         <p class="section-lead reveal">
-          Anyone can generate a lead list or competitor report with AI. You get the checked
-          version — every fact confirmed by a human — and a clear path to keep it from going stale.
+          Five services that test, structure, and verify AI systems and content — so buyers can
+          find you through AI search, your assistants answer correctly, and everything you
+          publish holds up to scrutiny.
         </p>
       </div>
     </section>
 
     <section class="section section-tight">
       <div class="container">
-        <h2 class="reveal">Projects</h2>
-        <p class="section-lead reveal">One payment, one delivery — the way most clients start.</p>
         <ul class="service-list">
-          {siteConfig.projects.map((service) => (
+          {siteConfig.services.map((service) => (
             <li class="service-row reveal">
-              <div class="service-head">
-                <h3>{service.title}</h3>
-                <span class="price">{service.price}</span>
-              </div>
+              <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <ul class="list">
-                {service.benefits.map((benefit) => (
-                  <li>{benefit}</li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="reveal">Retainers</h2>
-        <p class="section-lead reveal">
-          Monthly work that keeps prices, leads, catalogs, and research accurate. Price Watch
-          and Lead Pipeline are the usual next step after a project.
-        </p>
-        <ul class="service-list">
-          {siteConfig.retainers.map((service) => (
-            <li class="service-row reveal">
-              <div class="service-head">
-                <h3>
-                  {service.title}
-                  {service.featured && <span class="tag">Start here</span>}
-                </h3>
-                <span class="price">{service.price}</span>
-              </div>
-              <p>{service.description}</p>
-              <p class="for-whom">For: {service.forWhom}</p>
-              <ul class="list">
-                {service.benefits.map((benefit) => (
-                  <li>{benefit}</li>
+              <p class="for-whom">Who it's for: {service.forWhom}</p>
+              <ul class="price-lines">
+                {service.pricing.map((line) => (
+                  <li class="price-line">
+                    {line.label && <span class="price-label">{line.label}</span>}
+                    <span class="price-amount">{line.value}</span>
+                    {line.free && <span class="tag">Free for first clients</span>}
+                  </li>
                 ))}
               </ul>
             </li>
@@ -76,16 +47,15 @@ import { siteConfig } from '../config';
     </section>
 
     <section class="section section-tight">
-      <div class="container">
-        <h2 class="reveal">Guarantees</h2>
-        <ul class="guarantee-list">
-          {siteConfig.guarantees.map((item) => (
-            <li class="reveal">{item}</li>
-          ))}
-        </ul>
+      <div class="container narrow">
+        <p class="section-lead reveal">
+          Across all five services, the goal is the same: making AI accurate, verifiable, and
+          genuinely useful for your business.
+        </p>
         <p class="reveal muted-note">
-          I don’t guarantee more sales, conversions, or rankings — only that the data is
-          accurate and delivered on time.
+          I can’t guarantee inclusion in AI-generated answers, rankings, or sales — no honest
+          provider can. What I do guarantee is that the work is accurate, verifiable, and
+          delivered on time.
         </p>
         <div class="cta-row reveal">
           <a class="button" href="/book">Book a Consultation</a>

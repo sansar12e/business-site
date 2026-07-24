@@ -90,33 +90,23 @@ collections:
               - { label: CTA Button Text, name: ctaText, widget: string }
               - { label: CTA Button Link, name: ctaLink, widget: string }
 
-          - label: Projects
-            name: projects
+          - label: Services
+            name: services
             widget: list
             fields:
               - { label: ID, name: id, widget: string }
               - { label: Title, name: title, widget: string }
-              - { label: Description, name: description, widget: string }
-              - { label: Price, name: price, widget: string }
-              - label: Benefits
-                name: benefits
-                widget: list
-                field: { label: Benefit, name: benefit, widget: string }
-
-          - label: Retainers
-            name: retainers
-            widget: list
-            fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Title, name: title, widget: string }
-              - { label: Description, name: description, widget: string }
-              - { label: Price, name: price, widget: string }
+              - { label: Summary, name: summary, widget: string, hint: "One short line shown on the home page" }
+              - { label: Description, name: description, widget: text, hint: "2–3 sentences: what it is and why it matters" }
               - { label: Who it's for, name: forWhom, widget: string }
-              - { label: Featured, name: featured, widget: boolean, default: false, required: false }
-              - label: Benefits
-                name: benefits
+              - { label: Price Summary, name: priceSummary, widget: string, hint: "Short price shown on the home page, e.g. From $250" }
+              - label: Pricing
+                name: pricing
                 widget: list
-                field: { label: Benefit, name: benefit, widget: string }
+                fields:
+                  - { label: Label, name: label, widget: string, required: false, hint: "e.g. Build, Maintenance — leave blank for a single price" }
+                  - { label: Amount, name: value, widget: string }
+                  - { label: Free for first clients, name: free, widget: boolean, default: false, required: false }
 
           - label: Guarantees
             name: guarantees
